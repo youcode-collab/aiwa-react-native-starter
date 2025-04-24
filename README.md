@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
+# Documentation du Projet React Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Bienvenue dans le projet React Mobile. Ce document présente la structure du projet et détaille l'utilisation des principaux composants : les routes, le queryClient et le hook useAppsTORE.
 
-## Get started
+## Structure du Projet
 
-1. Install dependencies
+```
+react-mobile/
+├── app/                   # Dossier principal pour les pages et la navigation
+│   ├── _layout.tsx        # Layout principal de l'application
+│   ├── (tabs)/            # Pages organisées en onglets
+│   │   ├── _layout.tsx    # Layout des onglets
+│   │   ├── index.tsx      # Page d'accueil des onglets
+│   │   ├── other.tsx      # Page secondaire
+├── assets/                # Ressources statiques (images, polices, etc.)
+│   ├── fonts/             # Polices personnalisées
+│   ├── images/            # Images utilisées dans l'application
+├── components/            # Composants réutilisables
+├── constants/             # Constantes globales (ex. couleurs)
+├── hooks/                 # Hooks personnalisés
+├── services/              # Services (ex. configuration de React Query)
+├── store/                 # Gestion de l'état global avec Zustand
+├── scripts/               # Scripts utilitaires
+├── package.json           # Dépendances et scripts npm
+├── tsconfig.json          # Configuration TypeScript
+└── README.md              # Documentation du projet
+```
 
-   ```bash
+Le projet intègre des technologies modernes pour améliorer à la fois la performance et l'esthétique de l'application. Il utilise notamment:
+- Zustand pour une gestion d'état centralisée et simplifiée,
+- Des polices personnalisées définies dans le dossier assets/fonts afin d'assurer une identité visuelle cohérente,
+- React Query pour optimiser la gestion et la synchronisation des requêtes asynchrones.
+
+## Comment exécuter le projet
+
+Pour lancer le projet React Mobile, suivez ces étapes :
+
+1. Installez les dépendances :
+   ```
    npm install
    ```
 
-2. Start the app
-
-   ```bash
-    npx expo start
+2. Démarrez l'application en mode développement :
+   ```
+   npm run start
    ```
 
-In the output, you'll find options to open the app in a
+Assurez-vous d'avoir Node.js et npm installés sur votre système.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Conclusion
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Ce projet est organisé pour garantir une séparation claire des responsabilités entre :
+- La définition des routes pour la navigation,
+- La gestion des requêtes async avec queryClient,
+- La gestion centralisée de l’état avec useAppsTORE.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Utilisez ce document pour mieux comprendre la structure et les principes d’implémentation du projet React Mobile.
